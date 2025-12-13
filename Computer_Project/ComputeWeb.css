@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ------------------------------------
+   TOP NAVIGATION
+------------------------------------ */
+#Top_page {
+  position: sticky;
+  top: 0;
+  background-color: gray;
+  padding: 25px 55px;
+}
+
+a.Top-Button {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  background-color: gray;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#Top_page a:hover:not(.active){
+  background-color: rgb(194, 194, 194);
+  border-radius: 5px;
+}
+
+a.Top-Button.active {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.active{
+  background-color: white;
+  border-radius: 5px;
+}
+/* ------------------------------------
+   PROJECT CAROUSEL
+------------------------------------ */
+.carousel {
+  gap: 10px;
+
+  display: flex;
+  align-items: end;
+  width: 800px;
+  height: 200px;
+  margin: 5% auto 0 auto;
+}
+
+.project-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+/* .showing {
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid black; */
+/* } */
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  color: black;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.arrow.left { left: 0; }
+.arrow.right { right: 0; }
+
+/* ------------------------------------
+   PROJECT SECTION
+------------------------------------ */
+#project {
+  background-color: rgb(255, 255, 255);
+  margin-top: 200px;
+  padding-top: 20px;
+  height: 560px;
+  border: 2px solid black;
+  display: flex;
+
+  gap: 20px;
+}
+
+#Project_title {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 700;
+  font-size: 150%;
+  color: black;
+  background-color: white;
+
+  text-align: center;
+
+  width: 20%;
+  height: 500px;
+  padding-top: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+
+#title_project{
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  font-size: 150%;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 30px;
+}
+
+#paragraph{
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  border-left: 0px;  
+  border-right: 0px;
+}
+
+/* ------------------------------------
+   work
+------------------------------------ */
+
+.second_box{
+  width: 40%;
+  height: 500px;
+
+}
+
+.work_box{
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 280px;
+  gap: 30px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.art_box{
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 200px;
+  text-align: left;
+}
+
+#work_experience{
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 200%;
+  padding: 30px;
+  padding-bottom: 10px;
+  text-align: left;
+  
+}
+
+#work_paragraph{
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 30px;
+}
+
+#art_experience{
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 200%;
+  padding: 30px;
+  padding-bottom: 10px;
+}
+
+/* ------------------------------------
+   education
+------------------------------------ */
+.Education_box{
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 40%;
+  margin-right: 15px;
+
+}
+
+
+#education_title{
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 200%;
+  padding: 30px;
+}
+/* ------------------------------------
+   review box
+------------------------------------ */
+
+#review_title{
+  font-family: "Pixelify Sans", sans-serif;
+  padding-top: 50px;;
+  text-align: center;
+}
+
+.review_box{
+  width: auto;
+  height: 250px;
+  display: flex;
+  padding: 30px;
+  gap: 20px;
+  justify-content: center;
+ 
+ 
+}
+
+.box_review{
+  font-family: "Nunito", sans-serif;
+  font-size: 65%;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 20%;
+  padding: 30px;
+  text-align: left;
+}
+
+.description{
+  font-size: 150%;
+  text-align: right;
+  color: grey;
+  bottom: 0;
+  right: 0;
+}
+/* ------------------------------------
+   COntact ME
+------------------------------------ */
+
+.contact_box{
+  width: auto;
+  height: 300px;
+  padding: 10%;
+
+
+}
+
+#insta_name{
+  display: inline;
+  font-family: "Nunito", sans-serif;
+}
+
+#gmail_name{
+  display: inline;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.gmail_box{
+  margin-top: 15px;
+}
+
+.phone_box{
+  margin-top: 15px;
+}
+
+#phone_number{
+  display: inline;
+  font-family: "Nunito", sans-serif;
+}
+/* ------------------------------------
+   INTRODUCTION
+------------------------------------ */
+#introduction {
+  font-family: "Nunito", sans-serif;
+  margin-top: 100px;
+  margin-left: 100px;
+  display: flex;
+
+}
+
+#pic{
+  display: flex;
+  
+  margin-right: 10%;
+  margin-left: auto;
+  width: 30%;
+  height: 300px;
+  border-radius: 10%;
+  border: 2px solid black;
+
+}
+
+/* ------------------------------------
+   WARNING BOX
+------------------------------------ */
+#warning {
+  background-color: yellow;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 30px;
+  margin: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  #Top_page {
+    position: static;
+  }
+
+  a.Top-Button {
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+
+  #project {
+    flex-direction: column; 
+    align-items: stretch;   
+    height: auto;           
+    gap: 20px;              
+    border: 0px;
+    margin: 20px;
+  }
+
+  #Project_title {
+    width: 100%;
+    margin-bottom: 10px;
+    height: auto;           
+  }
+
+  .second_box, .Education_box {
+    width: 100%;
+    height: auto;  
+    margin-top: 0px;
+    padding-bottom: 20px;
+  }
+
+  /* #work_paragraph{
+    padding-bottom: 20px;
+  } */
+  #introduction{
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+  } 
+
+  #pic {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 40px;
+  } 
+  
+  .art_box {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .review_box {
+    flex-direction: column; 
+    text-align: left;
+    width: 100%;
+    padding: 14px;
+    gap: 10px;
+    height: auto;
+  }
+
+  #review_title {
+    flex-direction: column;
+    display: block;
+    margin-bottom: 10px;
+    height: auto;
+  }
+
+  .box_review{
+    width: 100%;
+    
+  }
+}
