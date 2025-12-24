@@ -8,10 +8,10 @@
 #Body{
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
- 
+    padding: 10px;
 }
 
 #title{
@@ -20,7 +20,8 @@
 }
 
 .smaller_box{
-    width: 40%;
+    min-width: 40%;
+
 }
 
 #input_text{
@@ -28,11 +29,86 @@
     height: 40px;
     border: 2px solid black;
     border-radius: 10px;
+    padding-left:5% ;
+}
+
+#form{
+    display: flex;
+
+    
 }
 
 #submit_button{
-    height: 40px;
-
+    position: relative;
+    height: 30px;
+    margin-top: 5px;
+    width: 7%;
     border: 2px solid black;
     border-radius: 5px;
+    padding: auto;
+    margin-left: 5px;
+    right: 10%;
+}
+
+.icon {
+  width: 100%;
+  max-width: 24px;
+}
+
+.container {
+  display: flex;
+  margin-top: 10px;
+  border-bottom: 2px solid black;
+  width: 80%;
+  padding: 10px;
+  font-family: "Roboto Slab";
+}
+
+.checkbox-label {
+  display: flex;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.checkmark {
+  display: block;
+  width: 10%;
+  padding: 10px;
+
+  background: #eee;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: background 0.2s;
+}
+
+/* Checked state */
+.checkbox-label input:checked + .checkmark{
+  background-color: #3d3d3d;
+  color: white;
+
+}
+
+
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+/* Text next to checkbox */
+.label-text {
+  flex-grow: 1;   /* fill remaining space */
+  user-select: none;
 }
