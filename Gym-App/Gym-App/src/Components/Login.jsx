@@ -4,7 +4,7 @@ import { Lock } from "lucide-react";
 // This is a "functional component" — just a JS function that returns JSX
 // (JSX = HTML-looking syntax you can write inside JavaScript).
 // React renders whatever this function returns.
-export default function LoginScreen() {
+export default function LoginScreen({ onSignIn }) {
   // useState gives you a piece of memory ("state") that React tracks.
   // email/password = the current value. setEmail/setPassword = how you update it.
   // When you call setEmail(...), React automatically re-renders the component
@@ -22,15 +22,17 @@ export default function LoginScreen() {
   return (
     // Outer wrapper: full height, dark background, centers content
     <div className="min-h-screen bg-black flex items-center justify-center p-6">
-      <div className="w-full max-w-sm">
+      <div className="w-full max-w-sm border-2 border-white">    
+         {/* border here */}
         {/* Avatar + name block */}
-        <div className="flex items-center gap-4 mb-10">
+        <div className="flex items-center gap-4 mb-10 border-2 border-white">
           <div className="w-16 h-16 rounded-full bg-neutral-800 flex items-center justify-center">
             <Lock className="w-6 h-6 text-white" strokeWidth={1.5} />
           </div>
           <h1 className="text-3xl font-bold text-white leading-tight">
             name<br />here
           </h1>
+          
         </div>
 
         {/* Heading + subtext */}

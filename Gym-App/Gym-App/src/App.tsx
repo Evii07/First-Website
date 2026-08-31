@@ -5,11 +5,12 @@ import HomeScreen from "./Components/Home.jsx";
 export default function App() {
   // this state variable says which screen is currently showing
   const [screen, setScreen] = useState("home");
+  const [name, weekStreak, notification] = useState(0);   // fetch from supabase
 
   return (
     <>
       {screen === "login" && <LoginScreen onSignIn={() => setScreen("home")} />}
-      {screen === "home" && <HomeScreen />}
-    </>
+      {screen === "home" && <HomeScreen name="John alfiandra" weekStreak={weekStreak} notification={notification} />}
+    </> 
   );
 }
